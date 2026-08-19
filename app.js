@@ -13,21 +13,21 @@
   const COLORS = ['#12303a', '#2a7a8c', '#e07a3d', '#c45e28', '#3d5c66', '#1a4a54'];
 
   const TRENDS = [
-    { tag: 'Pier', headline: 'Pacific Wheel is packed after 6', snippet: 'Ferris wheel line wrapping the arcade. Sunset slot is a 40-minute wait and nobody is leaving.', meta: 'Trending in SAMO' },
-    { tag: 'Promenade', headline: 'Third Street buskers vs. the speakers', snippet: 'A saxophone, a Bluetooth speaker, and a mime. Saturday night as designed.', meta: 'Downtown' },
-    { tag: 'Beach', headline: 'Bike path southbound is a parade', snippet: 'Ocean Park to Venice is bumper-to-bumper on two wheels. Walk the sand instead.', meta: 'Live on the path' },
-    { tag: 'Montana', headline: 'Montana Ave brunch overflow', snippet: 'Sidewalk tables full by 10. If you wanted a quiet coffee, you picked the wrong avenue.', meta: 'Neighborhood chat' },
-    { tag: 'Sunset', headline: 'Palisades Park is doing the postcard', snippet: 'Sky going peach over the pier. Bring a jacket — the marine layer is already rolling in.', meta: 'Golden hour' },
-    { tag: 'Transit', headline: 'Expo Line crawling into Downtown SM', snippet: 'E Line delayed at 26th. People are hopping off for the bus on Olympic.', meta: 'Getting around' }
+    { tag: 'Pier', headline: 'Pacific Wheel is packed after 6', snippet: 'Ferris wheel line wrapping the arcade. Sunset slot is a 40-minute wait and nobody is leaving.', meta: 'Official: Santa Monica Pier', url: 'https://www.santamonicapier.org/' },
+    { tag: 'Promenade', headline: 'Third Street buskers vs. the speakers', snippet: 'A saxophone, a Bluetooth speaker, and a mime. Saturday night as designed.', meta: 'Official: Downtown SM', url: 'https://downtownsm.com/third-street-promenade' },
+    { tag: 'Beach', headline: 'Bike path southbound is a parade', snippet: 'Ocean Park to Venice is bumper-to-bumper on two wheels. Walk the sand instead.', meta: 'Visit Santa Monica beaches', url: 'https://www.santamonica.com/things-to-do/beaches/' },
+    { tag: 'Montana', headline: 'Montana Ave brunch overflow', snippet: 'Sidewalk tables full by 10. If you wanted a quiet coffee, you picked the wrong avenue.', meta: 'Neighborhoods', url: 'https://www.santamonica.com/experience-santa-monica/neighborhoods/' },
+    { tag: 'Sunset', headline: 'Palisades Park is doing the postcard', snippet: 'Sky going peach over the pier. Bring a jacket. Marine layer already rolling in.', meta: 'Official: Palisades Park', url: 'https://www.santamonica.gov/places/parks/palisades-park' },
+    { tag: 'Transit', headline: 'E Line into Downtown SM', snippet: 'Metro E Line terminus at 4th and Colorado. Big Blue Bus on Ocean and Olympic.', meta: 'Official: Metro', url: 'https://www.metro.net/' }
   ];
 
   const PLACES = [
-    { tag: 'Neighborhood', title: 'The Pier', snippet: 'Wheel, arcade, and the Pacific pretending to be calm.' },
-    { tag: 'Neighborhood', title: 'Third Street Promenade', snippet: 'Open-air shops, street music, and the Saturday crush.' },
-    { tag: 'Neighborhood', title: 'Montana Avenue', snippet: 'Brunch, boutiques, and strollers that own the sidewalk.' },
-    { tag: 'Neighborhood', title: 'Ocean Park', snippet: 'Bungalows, Main Street coffee, and the walk to the sand.' },
-    { tag: 'Neighborhood', title: 'Palisades Park', snippet: 'Bluff lawns, binoculars, and that west-facing light.' },
-    { tag: 'Neighborhood', title: 'Main Street', snippet: 'Ocean Park cafes and the slow roll toward Venice.' }
+    { tag: 'Neighborhood', title: 'The Pier', snippet: 'Wheel, arcade, and the Pacific pretending to be calm.', url: 'https://www.santamonicapier.org/' },
+    { tag: 'Neighborhood', title: 'Third Street Promenade', snippet: 'Open-air shops, street music, and the Saturday crush.', url: 'https://downtownsm.com/third-street-promenade' },
+    { tag: 'Neighborhood', title: 'Montana Avenue', snippet: 'Brunch, boutiques, and strollers that own the sidewalk.', url: 'https://www.santamonica.com/experience-santa-monica/neighborhoods/' },
+    { tag: 'Neighborhood', title: 'Ocean Park', snippet: 'Bungalows, Main Street coffee, and the walk to the sand.', url: 'https://www.santamonica.com/experience-santa-monica/neighborhoods/' },
+    { tag: 'Neighborhood', title: 'Palisades Park', snippet: 'Bluff lawns, binoculars, and that west-facing light.', url: 'https://www.santamonica.gov/places/parks/palisades-park' },
+    { tag: 'Neighborhood', title: 'Big Blue Bus', snippet: 'Local buses on Ocean, Olympic, and Main. Not Metro.', url: 'https://www.bigbluebus.com/' }
   ];
 
   const TOPICS = [
@@ -238,7 +238,9 @@
 
   function renderTrends() {
     const card = function (t) {
-      return '<a class="news-item" href="#explore">' +
+      const href = t.url || '#explore';
+      const extra = t.url ? ' target="_blank" rel="noopener noreferrer"' : '';
+      return '<a class="news-item" href="' + href + '"' + extra + '>' +
         '<div class="news-item-tag">' + escapeHtml(t.tag) + '</div>' +
         '<div class="news-item-headline">' + escapeHtml(t.headline) + '</div>' +
         '<div class="news-item-snippet">' + escapeHtml(t.snippet) + '</div>' +
@@ -255,11 +257,13 @@
   function renderExplore() {
     function cards(list) {
       return list.map(function (c) {
-        return '<article class="explore-card">' +
-          '<div class="explore-card-tag">' + escapeHtml(c.tag) + '</div>' +
+        const inner = '<div class="explore-card-tag">' + escapeHtml(c.tag) + '</div>' +
           '<div class="explore-card-title">' + escapeHtml(c.title) + '</div>' +
-          '<div class="explore-card-snippet">' + escapeHtml(c.snippet) + '</div>' +
-        '</article>';
+          '<div class="explore-card-snippet">' + escapeHtml(c.snippet) + '</div>';
+        if (c.url) {
+          return '<a class="explore-card" href="' + c.url + '" target="_blank" rel="noopener noreferrer">' + inner + '</a>';
+        }
+        return '<article class="explore-card">' + inner + '</article>';
       }).join('');
     }
     document.getElementById('explore-pane-places').innerHTML = cards(PLACES);
