@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="samochat">
+  <rect width="32" height="32" rx="7" fill="#12303a"/>
+  <!-- sun over the water -->
+  <circle cx="16" cy="10.5" r="5.2" fill="#e07a3d"/>
+  <circle cx="16" cy="10.5" r="3.1" fill="#f6efe4" fill-opacity="0.28"/>
+  <!-- ocean -->
+  <path d="M3 17.5 Q8 15.6 12.5 17.4 T22 17.2 T29.5 17.6" fill="none" stroke="#2a7a8c" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- pier deck -->
+  <path d="M5.5 20.2 H26.5" stroke="#f6efe4" stroke-width="1.7" stroke-linecap="round"/>
+  <!-- pilings -->
+  <g fill="none" stroke="#f6efe4" stroke-width="1.55" stroke-linecap="round">
+    <path d="M9 20.2 V27.2"/>
+    <path d="M16 20.2 V28"/>
+    <path d="M23 20.2 V27.2"/>
+  </g>
+  <!-- light cross-braces -->
+  <g fill="none" stroke="#c45e28" stroke-width="0.9" stroke-linecap="round" opacity="0.85">
+    <path d="M9 23.2 L16 25.4"/>
+    <path d="M16 23 L23 25.4"/>
+  </g>
+</svg>
