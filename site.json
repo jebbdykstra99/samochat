@@ -1,0 +1,86 @@
+{
+  "siteId": "samochat",
+  "name": "samochat",
+  "tagline": "Santa Monica, talking.",
+  "composePlaceholder": "What's happening in SAMO?",
+  "emptyState": "This room is empty. Sign in with email to post the first take about SAMO. Guest can browse only.",
+  "theme": {
+    "bg": "#f6efe4",
+    "surface": "#fffaf3",
+    "nav-bg": "#12303a",
+    "nav-text": "#9bb8c0",
+    "nav-hover": "#dce8ea",
+    "nav-active": "#f6efe4",
+    "text": "#1a2a30",
+    "text-muted": "#4a5f66",
+    "text-light": "#6d8288",
+    "accent": "#e07a3d",
+    "accent-dark": "#c45e28",
+    "teal": "#2a7a8c",
+    "silver": "#c9bba8",
+    "border": "#e4d6c4",
+    "avatarColors": ["#12303a", "#2a7a8c", "#e07a3d", "#c45e28", "#3d5c66", "#1a4a54"]
+  },
+  "trends": [
+    { "tag": "Pier", "headline": "Pacific Wheel is packed after 6", "snippet": "Ferris wheel line wrapping the arcade. Sunset slot is a 40-minute wait and nobody is leaving.", "meta": "Official: Santa Monica Pier", "url": "https://www.santamonicapier.org/" },
+    { "tag": "Promenade", "headline": "Third Street buskers vs. the speakers", "snippet": "A saxophone, a Bluetooth speaker, and a mime. Saturday night as designed.", "meta": "Official: Downtown SM", "url": "https://downtownsm.com/third-street-promenade" },
+    { "tag": "Beach", "headline": "Bike path southbound is a parade", "snippet": "Ocean Park to Venice is bumper-to-bumper on two wheels. Walk the sand instead.", "meta": "Visit Santa Monica beaches", "url": "https://www.santamonica.com/things-to-do/beaches/" },
+    { "tag": "Montana", "headline": "Montana Ave brunch overflow", "snippet": "Sidewalk tables full by 10. If you wanted a quiet coffee, you picked the wrong avenue.", "meta": "Neighborhoods", "url": "https://www.santamonica.com/experience-santa-monica/neighborhoods/" },
+    { "tag": "Sunset", "headline": "Palisades Park is doing the postcard", "snippet": "Sky going peach over the pier. Bring a jacket. Marine layer already rolling in.", "meta": "Official: Palisades Park", "url": "https://www.santamonica.gov/places/parks/palisades-park" },
+    { "tag": "Transit", "headline": "E Line into Downtown SM", "snippet": "Metro E Line terminus at 4th and Colorado. Big Blue Bus on Ocean and Olympic.", "meta": "Official: Metro", "url": "https://www.metro.net/" }
+  ],
+  "places": [
+    { "tag": "Neighborhood", "title": "The Pier", "snippet": "Wheel, arcade, and the Pacific pretending to be calm.", "url": "https://www.santamonicapier.org/" },
+    { "tag": "Neighborhood", "title": "Third Street Promenade", "snippet": "Open-air shops, street music, and the Saturday crush.", "url": "https://downtownsm.com/third-street-promenade" },
+    { "tag": "Neighborhood", "title": "Montana Avenue", "snippet": "Brunch, boutiques, and strollers that own the sidewalk.", "url": "https://www.santamonica.com/experience-santa-monica/neighborhoods/" },
+    { "tag": "Neighborhood", "title": "Ocean Park", "snippet": "Bungalows, Main Street coffee, and the walk to the sand.", "url": "https://www.santamonica.com/experience-santa-monica/neighborhoods/" },
+    { "tag": "Neighborhood", "title": "Palisades Park", "snippet": "Bluff lawns, binoculars, and that west-facing light.", "url": "https://www.santamonica.gov/places/parks/palisades-park" },
+    { "tag": "Neighborhood", "title": "Big Blue Bus", "snippet": "Local buses on Ocean, Olympic, and Main. Not Metro.", "url": "https://www.bigbluebus.com/" }
+  ],
+  "topics": [
+    { "tag": "Beach", "title": "Bike path & the strand", "snippet": "Cruisers, e-bikes, and the person walking four dogs the wrong way." },
+    { "tag": "Weather", "title": "Marine layer", "snippet": "June gloom in August. Shorts at noon, hoodie by 5." },
+    { "tag": "Food", "title": "Promenade vs. Main", "snippet": "Tourist pretzel or neighborhood taco. Both count." },
+    { "tag": "Transit", "title": "E Line & Big Blue Bus", "snippet": "Expo delays, the Rapid on Lincoln, and parking as folklore." },
+    { "tag": "Housing", "title": "Rent & rooms", "snippet": "Dummy talk only — no listings, no personal data." },
+    { "tag": "Culture", "title": "Pier nights & Palisades sunsets", "snippet": "The wheel, the bluff, and whoever brought a speaker." }
+  ],
+  "seedNote": "sample — not mixed into the live feed",
+  "seed": [
+    { "id": "p1", "name": "Pier Watch", "handle": "pierwatch", "text": "Pacific Wheel lit up and the line is already around the arcade. If you want the sunset gondola, get here before the sky goes peach.", "hours": 2, "likes": 142, "replies": 21, "followed": true },
+    { "id": "p2", "name": "Promenade Sax", "handle": "thirdstreet", "text": "Third Street is three buskers deep tonight. Saxophone winning until the Bluetooth speaker showed up. Classic Promenade.", "hours": 3, "likes": 91, "replies": 27, "followed": true },
+    { "id": "p3", "name": "Montana Brunch", "handle": "montanaave", "text": "Montana Ave at 10am is a contact sport. I waited for a table, then watched three strollers claim the sidewalk. Still the best cortado in SAMO.", "hours": 5, "likes": 208, "replies": 44, "followed": false },
+    { "id": "p4", "name": "Ocean Park Kid", "handle": "opbungalow", "text": "Ocean Park is quiet until Main Street wakes up. Walked to the sand with a coffee. Would not trade the bungalow for a high-rise.", "hours": 8, "likes": 76, "replies": 11, "followed": true },
+    { "id": "p5", "name": "Path Cruiser", "handle": "bikepathsm", "text": "Bike path southbound is a parade from the pier to Venice. E-bikes doing 20, tourists doing 4. I hopped onto the sand. Faster.", "hours": 11, "likes": 167, "replies": 33, "followed": false },
+    { "id": "p6", "name": "Palisades Light", "handle": "bluffhour", "text": "Palisades Park at golden hour. Sky going from peach to that last teal over the water. Jacket weather already. This is the whole personality.", "hours": 14, "likes": 254, "replies": 18, "followed": true },
+    { "id": "p7", "name": "Expo Rider", "handle": "elinewest", "text": "E Line stalled at 26th. Hopped the Big Blue Bus on Olympic. Downtown SM in twelve minutes and I still beat the train.", "hours": 18, "likes": 64, "replies": 9, "followed": false },
+    { "id": "p8", "name": "Main Street Late", "handle": "mainsm", "text": "Main Street after 9 is all patio lights and the walk home to Ocean Park. Venice is loud. We are not.", "hours": 22, "likes": 119, "replies": 14, "followed": true }
+  ],
+  "notifs": [
+    { "id": "n1", "text": "@montanaave liked your take on brunch.", "time": "1h", "unread": true },
+    { "id": "n2", "text": "@pierwatch mentioned you in a sunset check.", "time": "3h", "unread": true },
+    { "id": "n3", "text": "@bikepathsm started following you. Dummy follow.", "time": "Yesterday", "unread": true }
+  ],
+  "threads": [
+    {
+      "id": "t1",
+      "name": "Montana Brunch",
+      "handle": "montanaave",
+      "preview": "Okay but have you tried the cortado after 11?",
+      "messages": [
+        { "me": false, "text": "Okay but have you tried the cortado after 11?" },
+        { "me": true, "text": "Every Saturday. This is not a debate." }
+      ]
+    },
+    {
+      "id": "t2",
+      "name": "Path Cruiser",
+      "handle": "bikepathsm",
+      "preview": "Hopping off at Ocean Park. You?",
+      "messages": [
+        { "me": false, "text": "Hopping off at Ocean Park. You?" },
+        { "me": true, "text": "Still on the path by the pier. See you on Main." }
+      ]
+    }
+  ]
+}
