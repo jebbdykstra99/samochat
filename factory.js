@@ -394,9 +394,10 @@
 
   function applyRailChrome() {
     var cfg = railCfg();
-    var kicker = cfg.kicker || (railUsesNws() ? 'In the room' : '');
-    var title = cfg.title || (railUsesNws() ? 'Room Brief' : '');
-    var footer = cfg.footer || (railUsesNws() ? 'Official NWS forecast. Not a news ingest.' : '');
+    var hasRail = !!(cfg.kind || cfg.porch || (cfg.outbound && cfg.outbound.length));
+    var kicker = cfg.kicker || (hasRail ? 'In the room' : '');
+    var title = cfg.title || (hasRail ? 'Room Brief' : '');
+    var footer = cfg.footer || (hasRail ? 'Room Brief. Not a news ingest.' : '');
     var rk = document.querySelector('.right-panel-kicker');
     var rt = document.querySelector('.right-panel-title');
     var rf = document.querySelector('.right-panel-footer p');
@@ -997,7 +998,78 @@
     });
   }
 
+
+  function outboundCards() {
+    var list = railCfg().outbound || [];
+    var out = [];
+    for (var i = 0; i < list.length; i++) {
+      var t = list[i];
+      if (!t || !t.headline) continue;
+      out.push({
+        tag: t.tag || 'Link',
+        headline: t.headline,
+        snippet: t.snippet || '',
+        meta: t.meta || (railCfg().meta || 'This room'),
+        url: t.url || ''
+      });
+    }
+    return out;
+  }
+
+  function bartCdata(node) {
+    if (node == null) return '';
+    if (typeof node === 'string') return node;
+    if (typeof node === 'number') return String(node);
+    return node['#cdata-section'] || node['#text'] || node.description || '';
+  }
+
+  function fetchBartCards() {
+    var cfg = railCfg();
+    var key = cfg.bartKey || 'MW9S-E7SL-26DU-VV8V';
+    var url = cfg.bartUrl || ('https://api.bart.gov/api/bsa.aspx?cmd=bsa&json=y&key=' + encodeURIComponent(key));
+    var meta = cfg.meta || 'Live · BART';
+    var href = cfg.forecastPage || 'https://www.bart.gov/schedules/advisories';
+    return fetch(url).then(function (res) {
+      if (!res.ok) throw new Error('bart bsa ' + res.status);
+      return res.json();
+    }).then(function (data) {
+      var root = (data && data.root) || {};
+      var raw = root.bsa;
+      var list = Array.isArray(raw) ? raw : (raw ? [raw] : []);
+      var cards = [];
+      for (var i = 0; i < list.length; i++) {
+        var item = list[i] || {};
+        var desc = String(bartCdata(item.description) || bartCdata(item.sms_text) || '').replace(/\s+/g, ' ').trim();
+        if (!desc) continue;
+        if (/^no delay/i.test(desc) && list.length > 1) continue;
+        var typ = String(item.type || 'Advisory').toLowerCase();
+        var tag = /delay/.test(typ) || /delay/.test(desc.toLowerCase()) ? 'Delay' : 'BART';
+        var station = item.station && item.station !== 'BART' ? String(item.station) : '';
+        cards.push({
+          tag: tag,
+          headline: station || (tag === 'Delay' ? 'Delay advisory' : 'BART advisory'),
+          snippet: desc.slice(0, 180),
+          meta: meta,
+          url: href
+        });
+      }
+      if (!cards.length) {
+        cards.push({
+          tag: 'BART',
+          headline: 'No delay advisory',
+          snippet: 'BART reports no current BSA. Porch still posts into this room.',
+          meta: meta,
+          url: href
+        });
+      }
+      return cards;
+    });
+  }
+
   function fallbackTrendCards() {
+    var extra = outboundCards();
+    if (extra.length) return extra.slice(0, 1);
+    if (railKind() || railCfg().porch) return [];
     return (TRENDS || []).slice(0, 1);
   }
 
@@ -1010,17 +1082,22 @@
   }
 
   function renderTrends() {
-    var liveFetch = railUsesCwf() ? fetchCwfCards : (railUsesNws() ? fetchNwsCards : null);
+    var liveFetch = null;
+    if (railUsesCwf()) liveFetch = fetchCwfCards;
+    else if (railKind() === 'bart-bsa') liveFetch = fetchBartCards;
+    else if (railUsesNws()) liveFetch = fetchNwsCards;
     if (!liveFetch) {
-      paintRail(TRENDS || []);
+      paintRail(outboundCards().slice(0, railNwsSlots()));
       return;
     }
     paintRail([]);
     liveFetch().then(function (cards) {
-      if (cards && cards.length) paintRail(cards.slice(0, railNwsSlots()));
+      var extra = outboundCards();
+      var merged = (cards || []).concat(extra);
+      if (merged.length) paintRail(merged.slice(0, railNwsSlots()));
       else paintRail(fallbackTrendCards());
     }).catch(function (err) {
-      console.warn(railUsesCwf() ? 'nws cwf rail' : 'nws rail', err);
+      console.warn(railKind() || 'rail', err);
       paintRail(fallbackTrendCards());
     });
   }
