@@ -281,14 +281,15 @@
     }
   ],
   "rail": {
-    "kind": "nws-cwf",
+    "kind": "nws-forecast",
     "title": "Room Brief",
     "kicker": "On samo",
-    "meta": "Live · Tutuila waters",
-    "footer": "Official NWS coastal waters for American Samoa. Not a news ingest.",
-    "productType": "CWF",
-    "productLocation": "PPG",
-    "forecastPage": "https://www.weather.gov/ppg/marine",
+    "meta": "Live · Santa Monica",
+    "footer": "Official NWS forecast for Santa Monica and the LA coast. Not a news ingest.",
+    "lat": 34.0195,
+    "lon": -118.4912,
+    "forecastUrl": "https://api.weather.gov/gridpoints/LOX/146,45/forecast",
+    "forecastPage": "https://forecast.weather.gov/MapClick.php?lat=34.0195&lon=-118.4912",
     "userAgent": "samochat.com/rail (jebb@subx.it)",
     "porch": {
       "prompt": "Swell guess?",
@@ -297,6 +298,15 @@
         "8 ft",
         "12 ft"
       ]
-    }
+    },
+    "outbound": [
+      {
+        "tag": "Buoy",
+        "headline": "Santa Monica Bay buoy",
+        "snippet": "NDBC 46221 — official observations for the Santa Monica / LA coast.",
+        "meta": "NDBC",
+        "url": "https://www.ndbc.noaa.gov/station_page.php?station=46221"
+      }
+    ]
   }
 }
