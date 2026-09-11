@@ -291,8 +291,24 @@
     "forecastUrl": "https://api.weather.gov/gridpoints/LOX/146,45/forecast",
     "forecastPage": "https://forecast.weather.gov/MapClick.php?lat=34.0195&lon=-118.4912",
     "userAgent": "samochat.com/rail (jebb@subx.it)",
+    "overlay": {
+      "enabled": true,
+      "ms": 7000,
+      "headline": "Live Santa Monica forecast",
+      "links": [
+        {
+          "label": "NWS Santa Monica forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=34.0195&lon=-118.4912"
+        },
+        {
+          "label": "Santa Monica Bay buoy",
+          "url": "https://www.ndbc.noaa.gov/station_page.php?station=46221"
+        }
+      ]
+    },
     "porch": {
       "prompt": "Swell guess?",
+      "dwellMs": 9000,
       "options": [
         "4 ft",
         "8 ft",
