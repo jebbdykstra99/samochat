@@ -308,6 +308,7 @@
     },
     "porch": {
       "prompt": "Swell guess?",
+      "dwellMs": 9000,
       "options": [
         "4 ft",
         "8 ft",
