@@ -143,14 +143,58 @@ service cloud.firestore {
       }
     }
 
+    function storyBodyOk(data) {
+      return data.type in ['text', 'image', 'video']
+        && data.authorName is string
+        && data.authorHandle is string
+        && data.createdAt is timestamp
+        && data.expiresAt is timestamp
+        && data.expiresAt > request.time + duration.value(23, 'h')
+        && data.expiresAt < request.time + duration.value(25, 'h')
+        && (
+          (data.type == 'text'
+            && data.text is string
+            && data.text.size() > 0
+            && data.text.size() <= 280)
+          || (data.type in ['image', 'video']
+            && data.mediaUrl is string
+            && data.mediaUrl.size() > 0
+            && (!data.keys().hasAny(['text']) || (data.text is string && data.text.size() <= 140)))
+        );
+    }
+
+    match /stories/{id} {
+      allow read: if true;
+      allow create: if emailVerified()
+        && notKilled(request.resource.data.siteId)
+        && request.auth.uid == request.resource.data.authorUid
+        && factorySite(request.resource.data)
+        && storyBodyOk(request.resource.data);
+      allow delete: if signedIn() && resource.data.authorUid == request.auth.uid;
+      allow update: if emailVerified() && notKilled(resource.data.siteId) && (
+        onlyOwnLike()
+        || (
+          request.resource.data.diff(resource.data).affectedKeys().hasOnly(['likeCount'])
+          && request.resource.data.likeCount is int
+        )
+      );
+    }
+
     match /reports/{reportId} {
       allow read: if isAdmin()
         || (signedIn() && resource.data.reporterUid == request.auth.uid);
       allow create: if emailVerified()
         && request.resource.data.reporterUid == request.auth.uid
         && factorySite(request.resource.data)
-        && request.resource.data.postId is string
-        && request.resource.data.reason is string;
+        && request.resource.data.reason is string
+        && (
+          (request.resource.data.keys().hasAny(['postId'])
+            && request.resource.data.postId is string
+            && request.resource.data.postId.size() > 0)
+          || (request.resource.data.keys().hasAny(['storyId'])
+            && request.resource.data.storyId is string
+            && request.resource.data.storyId.size() > 0)
+        );
       allow update, delete: if isAdmin();
     }
 
