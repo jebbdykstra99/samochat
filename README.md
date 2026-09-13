@@ -16,8 +16,8 @@ Wordmark: **samochat**. Tagline: *Santa Monica, talking.* `SITE_ID` is `samochat
 
 ## Factory files
 
-- `site.json` — siteId, name, tagline, theme tokens, right-rail links, sample seed/notifs/threads (sample copy is **not** mixed into the live feed)
-- `factory.js` — Auth email/password, live posts, image upload, poll, reply, delete, empty-state
+- `site.json` — siteId, name, tagline, theme tokens, right-rail links, sample seed/notifs/threads (sample copy is **not** mixed into the live feed). Stories v0 is flagged here (`stories.enabled`); **only samochat** turns it on in this repo.
+- `factory.js` — Auth email/password, live posts, image upload, poll, reply, delete, empty-state, feature-flagged Stories tray/viewer/create
 - `firestore.rules`, `storage.rules`, `firebase.indexes.json`, `RULES.md` — source of truth; publish in the Firebase console for **subx-skins**. Do not `firebase deploy` from an agent.
 
 ## Product locks
