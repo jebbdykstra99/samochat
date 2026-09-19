@@ -10,6 +10,7 @@ Publish by hand in the Firebase console:
 2. Storage rules from `storage.rules` (includes `stories/{siteId}/{uid}/{file}` — image/* or video/mp4|webm, 8 MB)
 3. Composite indexes from `firebase.indexes.json`
    - `posts`: `siteId` ASC, `createdAt` DESC
+   - `posts`: `siteId` ASC, `nestSlug` ASC, `createdAt` DESC (nest rooms; v0 still client-filters the site feed)
    - `stories`: `siteId` ASC, `createdAt` DESC (optional; the client filters TTL in-memory and does not require this index to list)
 
 Until the posts index exists, the live feed query will fail in the compose error line — that is expected, not a fake-success path.
