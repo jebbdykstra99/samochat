@@ -887,6 +887,8 @@
     }
     document.body.classList.toggle('is-nest', !!nest);
     if (nest) {
+      abortPorchForNest();
+      dismissRailOverlay('nest');
       if (paintedNestSlug !== nest.slug) {
         paintedNestSlug = nest.slug;
         applyNestRailChrome(nest);
@@ -1285,7 +1287,7 @@
 
   function paintRail(items) {
     ensureRailCss();
-    var html = (items || []).map(renderTrendCard).join('') + porchCardHtml();
+    var html = (items || []).map(renderTrendCard).join('') + (currentNest ? '' : porchCardHtml());
     var rail = document.getElementById('news-feed');
     var page = document.getElementById('news-page-list');
     if (rail) rail.innerHTML = html;
@@ -1530,6 +1532,7 @@
 
   function maybeShowRailOverlay() {
     if (!railOverlayUiReady) return;
+    if (currentNest) return;
     if (!overlayEnabled()) return;
     if (overlaySeen()) return;
     if (document.getElementById('rail-overlay')) return;
@@ -2293,11 +2296,28 @@
   }
 
   function seedRail() {
+    if (currentNest) {
+      paintRail(nestRailCards(currentNest));
+      return;
+    }
     var extra = outboundCards();
     paintRail(extra.length ? extra.slice(0, railNwsSlots()) : []);
   }
 
+  function abortPorchForNest() {
+    if (!porchDwellActive && !porchDwellPendingItems) return;
+    porchDwellActive = false;
+    porchDwellPaused = false;
+    porchDwellPendingItems = null;
+    if (porchDwellTimer) {
+      clearTimeout(porchDwellTimer);
+      porchDwellTimer = null;
+    }
+    setPorchDwellAttr(false);
+  }
+
   function commitRail(items) {
+    if (currentNest) return;
     if (porchDwellActive) {
       porchDwellPendingItems = items;
       return;
@@ -2337,6 +2357,11 @@
       porchDwellTimer = null;
     }
     setPorchDwellAttr(false);
+    if (currentNest) {
+      porchDwellPendingItems = null;
+      paintRail(nestRailCards(currentNest));
+      return;
+    }
     var items = porchDwellPendingItems;
     porchDwellPendingItems = null;
     if (items && items.length) paintRail(items);
@@ -2360,6 +2385,11 @@
   }
 
   function renderTrends(quiet) {
+    if (currentNest) {
+      applyNestRailChrome(currentNest);
+      paintRail(nestRailCards(currentNest));
+      return;
+    }
     var liveFetch = null;
     if (railUsesCwf()) liveFetch = fetchCwfCards;
     else if (railKind() === 'bart-bsa') liveFetch = fetchBartCards;
