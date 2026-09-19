@@ -143,6 +143,63 @@
       "snippet": "The wheel, the bluff, and whoever brought a speaker."
     }
   ],
+  "nests": [
+    {
+      "slug": "pier",
+      "label": "Pier",
+      "parent": null,
+      "kind": "place",
+      "blurb": "DUMMY nest — Pacific Wheel, arcade, sunset gondola. Sample pack only. Not a live room.",
+      "nav": true,
+      "rankings": [
+        {
+          "id": "pier-dummy-snacks",
+          "title": "DUMMY Top 3 pier snacks",
+          "items": [
+            { "rank": 1, "name": "Corn dog", "note": "Arcade line bait", "priceHint": "US $8", "url": null },
+            { "rank": 2, "name": "Lemonade", "note": "Too sweet, still fine", "priceHint": "US $6", "url": null },
+            { "rank": 3, "name": "Churros", "note": "Sugar on the boardwalk", "priceHint": "US $7", "url": null }
+          ]
+        }
+      ],
+      "reviews": [
+        { "id": "pier-r1", "subject": "Pacific Wheel (dummy)", "stars": 4, "snippet": "Sample review — not a real take.", "region": "US" }
+      ],
+      "railPins": []
+    },
+    {
+      "slug": "promenade",
+      "label": "Promenade",
+      "parent": null,
+      "kind": "place",
+      "blurb": "DUMMY nest — Third Street buskers vs. the speakers. Sample pack only.",
+      "nav": true,
+      "rankings": [
+        {
+          "id": "prom-dummy-nights",
+          "title": "DUMMY Saturday night stack",
+          "items": [
+            { "rank": 1, "name": "Saxophone", "note": "Winning until Bluetooth", "priceHint": null, "url": null },
+            { "rank": 2, "name": "Mime", "note": "Still there", "priceHint": null, "url": null }
+          ]
+        }
+      ],
+      "reviews": [
+        { "id": "prom-r1", "subject": "Third Street (dummy)", "stars": 3, "snippet": "Sample review — busker standoff, not a real take.", "region": "US" }
+      ],
+      "railPins": []
+    },
+    {
+      "slug": "montana",
+      "label": "Montana",
+      "parent": null,
+      "kind": "place",
+      "blurb": "DUMMY nest — quiet on purpose. Hidden from nav until a post has nestSlug=montana or nav is true.",
+      "rankings": [],
+      "reviews": [],
+      "railPins": []
+    }
+  ],
   "stories": {
     "enabled": true,
     "maxSeconds": 15,
