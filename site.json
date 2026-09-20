@@ -4,7 +4,7 @@
   "name": "samochat",
   "tagline": "Santa Monica, talking.",
   "composePlaceholder": "What's happening in SAMO?",
-  "emptyState": "This room is empty. Sign in with email to post the first take about SAMO. Guest can browse only.",
+  "emptyState": "This room is empty. Sign in with email to post the first take about Santa Monica, California — not Samoa. Guest can browse only.",
   "theme": {
     "bg": "#f6efe4",
     "surface": "#fffaf3",
@@ -75,72 +75,66 @@
   ],
   "places": [
     {
-      "tag": "Neighborhood",
-      "title": "The Pier",
-      "snippet": "Wheel, arcade, and the Pacific pretending to be calm.",
-      "url": "https://www.santamonicapier.org/"
+      "tag": "Seat",
+      "title": "Pico",
+      "snippet": "Pico Blvd corridor: neighbors, errands, the long street that cuts the city."
+    },
+    {
+      "tag": "Seat",
+      "title": "Downtown / Mid-City",
+      "snippet": "Third Street Promenade, civic core, mid-city blocks between the beach and the 10."
+    },
+    {
+      "tag": "Seat",
+      "title": "Venice-adjacent",
+      "snippet": "Border-block chat with Venice neighbors — shared streets, not a Venice takeover."
     },
     {
       "tag": "Neighborhood",
-      "title": "Third Street Promenade",
-      "snippet": "Open-air shops, street music, and the Saturday crush.",
-      "url": "https://downtownsm.com/third-street-promenade"
+      "title": "The Pier",
+      "snippet": "Pier nights, the wheel, and the walk back to Ocean."
     },
     {
       "tag": "Neighborhood",
       "title": "Montana Avenue",
-      "snippet": "Brunch, boutiques, and strollers that own the sidewalk.",
-      "url": "https://www.santamonica.com/experience-santa-monica/neighborhoods/"
+      "snippet": "North-of-Montana errands and the long blocks inland."
     },
     {
       "tag": "Neighborhood",
       "title": "Ocean Park",
-      "snippet": "Bungalows, Main Street coffee, and the walk to the sand.",
-      "url": "https://www.santamonica.com/experience-santa-monica/neighborhoods/"
-    },
-    {
-      "tag": "Neighborhood",
-      "title": "Palisades Park",
-      "snippet": "Bluff lawns, binoculars, and that west-facing light.",
-      "url": "https://www.santamonica.gov/places/parks/palisades-park"
-    },
-    {
-      "tag": "Neighborhood",
-      "title": "Big Blue Bus",
-      "snippet": "Local buses on Ocean, Olympic, and Main. Not Metro.",
-      "url": "https://www.bigbluebus.com/"
+      "snippet": "South of the Pier — locals, bikes, and the strand."
     }
   ],
   "topics": [
     {
+      "tag": "Seat",
+      "title": "Events",
+      "snippet": "What’s on in Santa Monica this week (community calendar talk, not ticket spam)."
+    },
+    {
+      "tag": "Seat",
+      "title": "Recommendations",
+      "snippet": "Local asks and tips — food, fixes, “where do I…?”"
+    },
+    {
       "tag": "Beach",
       "title": "Bike path & the strand",
-      "snippet": "Cruisers, e-bikes, and the person walking four dogs the wrong way."
+      "snippet": "Coast path talk — conditions from NWS when we brief, not invented surf."
     },
     {
       "tag": "Weather",
       "title": "Marine layer",
-      "snippet": "June gloom in August. Shorts at noon, hoodie by 5."
+      "snippet": "Morning gray vs afternoon sun. Room Brief is NWS LOX only."
     },
     {
       "tag": "Food",
       "title": "Promenade vs. Main",
-      "snippet": "Tourist pretzel or neighborhood taco. Both count."
+      "snippet": "Where you’d actually send a friend."
     },
     {
-      "tag": "Transit",
-      "title": "E Line & Big Blue Bus",
-      "snippet": "Expo delays, the Rapid on Lincoln, and parking as folklore."
-    },
-    {
-      "tag": "Housing",
-      "title": "Rent & rooms",
-      "snippet": "Dummy talk only — no listings, no personal data."
-    },
-    {
-      "tag": "Culture",
-      "title": "Pier nights & Palisades sunsets",
-      "snippet": "The wheel, the bluff, and whoever brought a speaker."
+      "tag": "Clarity",
+      "title": "Santa Monica, CA — not Samoa",
+      "snippet": "This room is the California coast city. Not the island in the Pacific."
     }
   ],
   "stories": {
@@ -289,8 +283,8 @@
     "kind": "nws-forecast",
     "title": "Room Brief",
     "kicker": "On samo",
-    "meta": "Live · Santa Monica",
-    "footer": "Official NWS forecast for Santa Monica and the LA coast. Not a news ingest.",
+    "meta": "Live · NWS LOX",
+    "footer": "Official NWS LOX forecast for Santa Monica. Not a news ingest. Santa Monica, CA — not Samoa.",
     "lat": 34.0195,
     "lon": -118.4912,
     "forecastUrl": "https://api.weather.gov/gridpoints/LOX/146,45/forecast",
@@ -299,7 +293,7 @@
     "overlay": {
       "enabled": true,
       "ms": 7000,
-      "headline": "Live Santa Monica forecast",
+      "headline": "Partly sunny, high near 73°F — NWS LOX",
       "links": [
         {
           "label": "NWS Santa Monica forecast",
