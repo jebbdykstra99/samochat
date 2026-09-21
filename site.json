@@ -293,7 +293,7 @@
     "overlay": {
       "enabled": true,
       "ms": 7000,
-      "headline": "Partly sunny, high near 73°F — NWS LOX",
+      "headline": "Partly sunny, high near 72°F — NWS LOX (Mon FACT)",
       "links": [
         {
           "label": "NWS Santa Monica forecast",
@@ -306,12 +306,12 @@
       ]
     },
     "porch": {
-      "prompt": "Swell guess?",
+      "prompt": "Pico or Downtown / Mid-City for today’s errand?",
       "dwellMs": 9000,
       "options": [
-        "4 ft",
-        "8 ft",
-        "12 ft"
+        "Pico",
+        "Downtown / Mid-City",
+        "Shared-border"
       ]
     },
     "outbound": [
@@ -322,6 +322,17 @@
         "meta": "NDBC",
         "url": "https://www.ndbc.noaa.gov/station_page.php?station=46221"
       }
-    ]
+    ],
+    "cmo": {
+      "title": "Santa Monica · Mon",
+      "state": "Morning FACT",
+      "updatedAt": "2026-09-21T15:37:00Z",
+      "source": "NWS LOX · KSMO obs ~8:20 AM PDT",
+      "today": "Overcast now 70°F calm; partly sunny, high near 72°F, SW 5–10 mph.",
+      "tonight": "Partly cloudy, low around 63°F.",
+      "tuesday": "Mostly sunny, high near 75°F.",
+      "page": "https://forecast.weather.gov/MapClick.php?lat=34.0195&lon=-118.4912",
+      "note": "Santa Monica, CA — not Samoa. Not a news ingest. No invented beach/surf."
+    }
   }
 }
