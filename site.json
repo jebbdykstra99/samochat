@@ -142,86 +142,66 @@
     "maxSeconds": 15,
     "maxBytes": 8000000
   },
-  "seedNote": "sample — not mixed into the live feed",
+  "seedNote": "STEWARD_REFRESH Fri 2026-09-25 · LOX/CityTV · no second fight",
   "seed": [
     {
-      "id": "p1",
-      "name": "Pier Watch",
-      "handle": "pierwatch",
-      "text": "Pacific Wheel lit up and the line is already around the arcade. If you want the sunset gondola, get here before the sky goes peach.",
+      "id": "steward-1",
+      "name": "Friday LOX",
+      "handle": "fri_lox",
+      "text": "FACT: Patchy morning fog then mostly sunny, high near 79°F (NWS LOX). https://www.weather.gov/lox/ What is your Friday side seeing?",
+      "hours": 1,
+      "likes": 0,
+      "replies": 0,
+      "followed": true
+    },
+    {
+      "id": "steward-2",
+      "name": "CityTV hub",
+      "handle": "citytv16",
+      "text": "FACT: Official City of Santa Monica CityTV 16 live plus council/planning archives (outbound only). https://www.smgov.net/video/ What are you watching?",
       "hours": 2,
-      "likes": 142,
-      "replies": 21,
+      "likes": 0,
+      "replies": 0,
       "followed": true
     },
     {
-      "id": "p2",
-      "name": "Promenade Sax",
-      "handle": "thirdstreet",
-      "text": "Third Street is three buskers deep tonight. Saxophone winning until the Bluetooth speaker showed up. Classic Promenade.",
+      "id": "steward-3",
+      "name": "Small Business Microgrants",
+      "handle": "sm_microgrants",
+      "text": "FACT: City small-business relief microgrants offer $5,000 for eligible brick-and-mortar businesses; apply by Oct 1. https://www.santamonica.gov/ Who is passing this along?",
       "hours": 3,
-      "likes": 91,
-      "replies": 27,
+      "likes": 0,
+      "replies": 0,
+      "followed": false
+    },
+    {
+      "id": "steward-4",
+      "name": "Hispanic Heritage Month",
+      "handle": "samo_heritage",
+      "text": "FACT: Santa Monica is marking Hispanic Heritage Month Sep 15–Oct 15. https://www.santamonica.gov/ What local note belongs in the room?",
+      "hours": 4,
+      "likes": 0,
+      "replies": 0,
       "followed": true
     },
     {
-      "id": "p3",
-      "name": "Montana Brunch",
-      "handle": "montanaave",
-      "text": "Montana Ave at 10am is a contact sport. I waited for a table, then watched three strollers claim the sidewalk. Still the best cortado in SAMO.",
+      "id": "steward-5",
+      "name": "Ocean Way Festival",
+      "handle": "oceanwayfact",
+      "text": "FACT: Ocean Way Festival is canceled until 2027, per the city callout. https://www.santamonica.gov/ What should neighbors bookmark instead?",
       "hours": 5,
-      "likes": 208,
-      "replies": 44,
+      "likes": 0,
+      "replies": 0,
       "followed": false
     },
     {
-      "id": "p4",
-      "name": "Ocean Park Kid",
-      "handle": "opbungalow",
-      "text": "Ocean Park is quiet until Main Street wakes up. Walked to the sand with a coffee. Would not trade the bungalow for a high-rise.",
-      "hours": 8,
-      "likes": 76,
-      "replies": 11,
-      "followed": true
-    },
-    {
-      "id": "p5",
-      "name": "Path Cruiser",
-      "handle": "bikepathsm",
-      "text": "Bike path southbound is a parade from the pier to Venice. E-bikes doing 20, tourists doing 4. I hopped onto the sand. Faster.",
-      "hours": 11,
-      "likes": 167,
-      "replies": 33,
-      "followed": false
-    },
-    {
-      "id": "p6",
-      "name": "Palisades Light",
-      "handle": "bluffhour",
-      "text": "Palisades Park at golden hour. Sky going from peach to that last teal over the water. Jacket weather already. This is the whole personality.",
-      "hours": 14,
-      "likes": 254,
-      "replies": 18,
-      "followed": true
-    },
-    {
-      "id": "p7",
-      "name": "Expo Rider",
-      "handle": "elinewest",
-      "text": "E Line stalled at 26th. Hopped the Big Blue Bus on Olympic. Downtown SM in twelve minutes and I still beat the train.",
-      "hours": 18,
-      "likes": 64,
-      "replies": 9,
-      "followed": false
-    },
-    {
-      "id": "p8",
-      "name": "Main Street Late",
-      "handle": "mainsm",
-      "text": "Main Street after 9 is all patio lights and the walk home to Ocean Park. Venice is loud. We are not.",
-      "hours": 22,
-      "likes": 119,
-      "replies": 14,
+      "id": "steward-6",
+      "name": "Council agendas",
+      "handle": "samo_clerk",
+      "text": "FACT: Official clerk agendas and meeting video are here: https://www.smgov.net/departments/clerk/agendas.aspx Which item are you tracking?",
+      "hours": 6,
+      "likes": 0,
+      "replies": 0,
       "followed": true
     }
   ],
@@ -247,34 +227,34 @@
   ],
   "threads": [
     {
-      "id": "t1",
-      "name": "Montana Brunch",
-      "handle": "montanaave",
-      "preview": "Okay but have you tried the cortado after 11?",
+      "id": "steward-seed-a",
+      "name": "Pico / Downtown",
+      "handle": "pico_downtown",
+      "preview": "I would put the errand in the seat where the route actually starts; no second fight, just compare the lived tradeoff.",
       "messages": [
         {
           "me": false,
-          "text": "Okay but have you tried the cortado after 11?"
+          "text": "What’s one Pico vs Downtown/Mid-City errand that still flips your week — and which seat would you drop it in?"
         },
         {
           "me": true,
-          "text": "Every Saturday. This is not a debate."
+          "text": "I would put the errand in the seat where the route actually starts; no second fight, just compare the lived tradeoff."
         }
       ]
     },
     {
-      "id": "t2",
-      "name": "Path Cruiser",
-      "handle": "bikepathsm",
-      "preview": "Hopping off at Ocean Park. You?",
+      "id": "steward-seed-b",
+      "name": "CityTV watch",
+      "handle": "citytv_watch",
+      "preview": "CityTV is the outbound hub for the live and archive path: https://www.smgov.net/video/",
       "messages": [
         {
           "me": false,
-          "text": "Hopping off at Ocean Park. You?"
+          "text": "Any City Council or Planning item you’re actually watching on CityTV this cycle — or are you archive-only?"
         },
         {
           "me": true,
-          "text": "Still on the path by the pier. See you on Main."
+          "text": "CityTV is the outbound hub for the live and archive path: https://www.smgov.net/video/"
         }
       ]
     }
@@ -283,8 +263,8 @@
     "kind": "nws-forecast",
     "title": "Room Brief",
     "kicker": "On samo",
-    "meta": "Live · NWS LOX",
-    "footer": "Official NWS LOX forecast for Santa Monica. Not a news ingest. Santa Monica, CA — not Samoa.",
+    "meta": "Live · NWS LOX · Fri FACT",
+    "footer": "Official NWS LOX forecast for Santa Monica. Fri Sep 25 FACT: patchy fog, then mostly sunny, high near 79°F. Not a news ingest. Santa Monica, CA — not Samoa.",
     "lat": 34.0195,
     "lon": -118.4912,
     "forecastUrl": "https://api.weather.gov/gridpoints/LOX/146,45/forecast",
@@ -293,7 +273,7 @@
     "overlay": {
       "enabled": true,
       "ms": 7000,
-      "headline": "Partly sunny, high near 72°F — NWS LOX (Mon FACT)",
+      "headline": "Patchy morning fog, then mostly sunny, high near 79°F — NWS LOX (Fri FACT)",
       "links": [
         {
           "label": "NWS Santa Monica forecast",
@@ -331,13 +311,12 @@
       }
     ],
     "cmo": {
-      "title": "Santa Monica · Mon",
+      "title": "Santa Monica · Fri",
       "state": "Morning FACT",
-      "updatedAt": "2026-09-21T15:37:00Z",
-      "source": "NWS LOX · KSMO obs ~8:20 AM PDT",
-      "today": "Overcast now 70°F calm; partly sunny, high near 72°F, SW 5–10 mph.",
-      "tonight": "Partly cloudy, low around 63°F.",
-      "tuesday": "Mostly sunny, high near 75°F.",
+      "updatedAt": "2026-09-25T06:26:00Z",
+      "source": "NWS LOX · point Santa Monica · updated ~11:26 PM PDT Sep 24",
+      "today": "Partly cloudy overnight, 69°F calm; Friday patchy fog before 11am, then mostly sunny, high near 79°F, WSW 5–10 mph afternoon.",
+      "tonight": "Patchy fog, low around 69°F.",
       "page": "https://forecast.weather.gov/MapClick.php?lat=34.0195&lon=-118.4912",
       "note": "Santa Monica, CA — not Samoa. Not a news ingest. No invented beach/surf."
     },
