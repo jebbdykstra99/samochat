@@ -316,11 +316,18 @@
     },
     "outbound": [
       {
-        "tag": "Buoy",
-        "headline": "Santa Monica Bay buoy",
-        "snippet": "NDBC 46221 — official observations for the Santa Monica / LA coast.",
-        "meta": "NDBC",
-        "url": "https://www.ndbc.noaa.gov/station_page.php?station=46221"
+        "tag": "Board",
+        "headline": "NWS LOX",
+        "url": "https://www.weather.gov/lox/",
+        "snippet": "Official NWS Los Angeles/Oxnard forecast office (same LOX source as Room Brief).",
+        "meta": "Official · board"
+      },
+      {
+        "tag": "Watch",
+        "headline": "Santa Monica CityTV",
+        "url": "https://www.smgov.net/video/",
+        "snippet": "City of Santa Monica official video hub (CityTV 16 live + council/planning archives). Outbound only — no in-app re-stream.",
+        "meta": "Legal · outbound"
       }
     ],
     "cmo": {
@@ -333,6 +340,7 @@
       "tuesday": "Mostly sunny, high near 75°F.",
       "page": "https://forecast.weather.gov/MapClick.php?lat=34.0195&lon=-118.4912",
       "note": "Santa Monica, CA — not Samoa. Not a news ingest. No invented beach/surf."
-    }
+    },
+    "maxCards": 4
   }
 }
