@@ -166,40 +166,10 @@
     },
     {
       "id": "steward-3",
-      "name": "Small Business Microgrants",
-      "handle": "sm_microgrants",
-      "text": "FACT: City small-business relief microgrants offer $5,000 for eligible brick-and-mortar businesses; apply by Oct 1. https://www.santamonica.gov/ Who is passing this along?",
-      "hours": 3,
-      "likes": 0,
-      "replies": 0,
-      "followed": false
-    },
-    {
-      "id": "steward-4",
-      "name": "Hispanic Heritage Month",
-      "handle": "samo_heritage",
-      "text": "FACT: Santa Monica is marking Hispanic Heritage Month Sep 15–Oct 15. https://www.santamonica.gov/ What local note belongs in the room?",
-      "hours": 4,
-      "likes": 0,
-      "replies": 0,
-      "followed": true
-    },
-    {
-      "id": "steward-5",
-      "name": "Ocean Way Festival",
-      "handle": "oceanwayfact",
-      "text": "FACT: Ocean Way Festival is canceled until 2027, per the city callout. https://www.santamonica.gov/ What should neighbors bookmark instead?",
-      "hours": 5,
-      "likes": 0,
-      "replies": 0,
-      "followed": false
-    },
-    {
-      "id": "steward-6",
       "name": "Council agendas",
       "handle": "samo_clerk",
       "text": "FACT: Official clerk agendas and meeting video are here: https://www.smgov.net/departments/clerk/agendas.aspx Which item are you tracking?",
-      "hours": 6,
+      "hours": 3,
       "likes": 0,
       "replies": 0,
       "followed": true
@@ -250,7 +220,7 @@
       "messages": [
         {
           "me": false,
-          "text": "Any City Council or Planning item you’re actually watching on CityTV this cycle — or are you archive-only?"
+          "text": "Any City Council / Planning item you’re actually watching on CityTV this cycle — or are you archive-only?"
         },
         {
           "me": true,
