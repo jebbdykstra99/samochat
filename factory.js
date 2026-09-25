@@ -2020,7 +2020,7 @@
       var slots = railNwsSlots();
       var liveKeep = Math.max(0, slots - extra.length);
       if (!liveKeep && (cards || []).length) liveKeep = 1;
-      var merged = (cards || []).slice(0, liveKeep).concat(extra);
+      var merged = railKind() === 'nws-forecast' ? (extra || []).concat((cards || []).slice(0, liveKeep)) : (cards || []).slice(0, liveKeep).concat(extra);
       if (merged.length) commitRail(merged);
       else commitRail(fallbackTrendCards());
     }).catch(function (err) {
