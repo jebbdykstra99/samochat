@@ -291,5 +291,111 @@
       "note": "Santa Monica, CA — not Samoa. Not a news ingest. No invented beach/surf."
     },
     "maxCards": 4
-  }
+  },
+  "taxonomy": {
+    "version": 1,
+    "name": "Santa Monica",
+    "symbolPrefix": "$",
+    "topics": [
+      {
+        "id": "downtown",
+        "label": "Downtown SM",
+        "kind": "place",
+        "blurb": "Promenade / DT",
+        "followDefault": true,
+        "adminSeed": true,
+        "status": "active"
+      },
+      {
+        "id": "pier",
+        "label": "Santa Monica Pier",
+        "kind": "place",
+        "blurb": "Pier & beach",
+        "followDefault": true,
+        "adminSeed": true,
+        "status": "active"
+      },
+      {
+        "id": "ocean-park",
+        "label": "Ocean Park",
+        "kind": "place",
+        "blurb": "Neighborhood",
+        "followDefault": false,
+        "adminSeed": true,
+        "status": "active"
+      },
+      {
+        "id": "montana",
+        "label": "Montana Ave",
+        "kind": "place",
+        "blurb": "North of Wilshire",
+        "followDefault": false,
+        "adminSeed": true,
+        "status": "active"
+      },
+      {
+        "id": "beach",
+        "label": "Beach & bike path",
+        "kind": "place",
+        "blurb": "Coast",
+        "followDefault": true,
+        "adminSeed": true,
+        "status": "active"
+      },
+      {
+        "id": "bbb",
+        "label": "Big Blue Bus",
+        "kind": "agency",
+        "blurb": "Local transit",
+        "followDefault": false,
+        "adminSeed": true,
+        "status": "active"
+      },
+      {
+        "id": "housing",
+        "label": "Housing",
+        "kind": "theme",
+        "blurb": "Local",
+        "followDefault": false,
+        "adminSeed": true,
+        "status": "active"
+      },
+      {
+        "id": "food",
+        "label": "SM food",
+        "kind": "theme",
+        "blurb": "Eats",
+        "followDefault": true,
+        "adminSeed": true,
+        "status": "active"
+      },
+      {
+        "id": "schools",
+        "label": "Schools",
+        "kind": "theme",
+        "blurb": "SMMUSD talk",
+        "followDefault": false,
+        "adminSeed": true,
+        "status": "active"
+      },
+      {
+        "id": "civic",
+        "label": "City Hall",
+        "kind": "theme",
+        "blurb": "Council / civic",
+        "followDefault": false,
+        "adminSeed": true,
+        "status": "active"
+      }
+    ],
+    "defaultWatchlist": [
+      "downtown",
+      "pier",
+      "beach",
+      "food"
+    ],
+    "notes": "Factory followable topics (StockTwits-style). Users keep/unfollow/add on their watchlist."
+  },
+  "v": 1,
+  "cacheBust": 1
 }
