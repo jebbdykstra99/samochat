@@ -396,6 +396,88 @@
     ],
     "notes": "Factory followable topics (StockTwits-style). Users keep/unfollow/add on their watchlist."
   },
+  "nests": [
+    {
+      "slug": "lox",
+      "label": "LOX",
+      "parent": null,
+      "kind": "theme",
+      "blurb": "Coast weather talk — Room Brief stays live NWS LOX; never invent beach/surf. Not NWS.",
+      "nav": true
+    },
+    {
+      "slug": "eats",
+      "label": "Eats",
+      "parent": null,
+      "kind": "theme",
+      "blurb": "SM food opinions (Pico, Main, Montana, Promenade) — not ads.",
+      "nav": true
+    },
+    {
+      "slug": "ask-samo",
+      "label": "Ask SAMO",
+      "parent": null,
+      "kind": "theme",
+      "blurb": "Newcomer / practical city questions (r/SantaMonica energy).",
+      "nav": true
+    },
+    {
+      "slug": "recommendations",
+      "label": "Recommendations",
+      "parent": null,
+      "kind": "theme",
+      "blurb": "Local tips seat — mirrors Explore Recommendations.",
+      "nav": true
+    },
+    {
+      "slug": "events",
+      "label": "Events",
+      "parent": null,
+      "kind": "theme",
+      "blurb": "Local happenings talk — cite city/BID calendars; do not invent.",
+      "nav": true
+    },
+    {
+      "slug": "big-blue-bus",
+      "label": "Big Blue Bus",
+      "parent": null,
+      "kind": "theme",
+      "blurb": "Rider experience on Santa Monica's bus — not official Big Blue Bus.",
+      "nav": true
+    },
+    {
+      "slug": "citytv",
+      "label": "CityTV",
+      "parent": null,
+      "kind": "theme",
+      "blurb": "Council / Planning / Rent Control watch threads — outbound smgov.net/video; not the City.",
+      "nav": true
+    },
+    {
+      "slug": "housing",
+      "label": "Housing",
+      "parent": null,
+      "kind": "theme",
+      "blurb": "Rent, moving, roommate talk inside SM — not a listings board.",
+      "nav": true
+    },
+    {
+      "slug": "pier-promenade",
+      "label": "Pier & Promenade",
+      "parent": null,
+      "kind": "place",
+      "blurb": "Pier / Ocean Ave / Third Street Promenade place talk — not tourism chrome.",
+      "nav": true
+    },
+    {
+      "slug": "venice-edge",
+      "label": "Venice edge",
+      "parent": null,
+      "kind": "place",
+      "blurb": "Shared-border talk with Venice neighbors — SM-first; not a Venice room.",
+      "nav": true
+    }
+  ],
   "v": 1,
   "cacheBust": 1
 }
