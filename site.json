@@ -1,5 +1,6 @@
 {
   "siteId": "samochat",
+  "dms": true,
   "redditSr": "samochat",
   "name": "samochat",
   "tagline": "Santa Monica, talking.",
