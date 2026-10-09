@@ -291,7 +291,9 @@
       "page": "https://forecast.weather.gov/MapClick.php?lat=34.0195&lon=-118.4912",
       "note": "Santa Monica, CA — not Samoa. Not a news ingest. No invented beach/surf."
     },
-    "maxCards": 4
+    "maxCards": 4,
+    "liveKeep": true,
+    "productLocation": "LOX"
   },
   "taxonomy": {
     "version": 1,
@@ -480,5 +482,9 @@
     }
   ],
   "v": 1,
-  "cacheBust": 1
+  "cacheBust": 1,
+  "skin": {
+    "bioDefault": "Talking about the city.",
+    "profileEmpty": "No posts yet. Hit Post when something about the city is on your mind."
+  }
 }
