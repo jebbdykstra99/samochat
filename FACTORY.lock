@@ -1,0 +1,13 @@
+{
+  "factory": "jebbdykstra99/subx-factory",
+  "version": "v1.0.0",
+  "room": "samochat",
+  "siteId": "samochat",
+  "files": {
+    "factory.js": "7466eefc88f4103dcc159bcea5a788d35dc4b1402ffba14b270f3ede99b610d0",
+    "styles.css": "cb2ae7658383ee423df8c47c964dfb279adc95e742f5a0c39bcc5b7a12260217"
+  },
+  "keepFiles": [],
+  "exceptions": "see subx-factory EXCEPTIONS.md",
+  "stampedAt": "2026-10-09T03:49:24Z"
+}
