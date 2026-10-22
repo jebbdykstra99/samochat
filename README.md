@@ -16,7 +16,7 @@ Wordmark: **samochat**. Tagline: *Santa Monica, talking.* `SITE_ID` is `samochat
 
 ## Factory files
 
-- `site.json` — siteId, name, tagline, theme tokens, right-rail links, sample seed/notifs/threads (sample copy is **not** mixed into the live feed). Stories v0 is flagged here (`stories.enabled`); **only samochat** turns it on in this repo.
+- `site.json` — siteId, name, tagline, compose/empty-state copy, theme tokens, right-rail trends, places, topics, nests, Room Brief rail config (`rail`), taxonomy, profile copy (`skin`), feature flags (`features`, `dms`, `redditCrosspost`, `redditSr`), `minAge`, and a `seedNote` steward note. No sample seed posts, notifs or threads (removed in #19). Stories v0 is flagged here (`stories.enabled`); **only samochat** turns it on in this repo.
 - `factory.js` — Auth email/password, live posts, image upload, poll, reply, delete, empty-state, feature-flagged Stories tray/viewer/create
 - Rules: the reference copies live in subx-factory [`rules/`](https://github.com/jebbdykstra99/subx-factory/tree/main/rules) (not in this repo). The shared nest index is in subx-factory [`factory/firestore.indexes.json`](https://github.com/jebbdykstra99/subx-factory/blob/main/factory/firestore.indexes.json).
 - `firebase.indexes.json` (kept): the only git copy of this room's live `posts` index (`siteId` + `createdAt`) and the Stories index (`stories`: `siteId` + `createdAt`). Keep it until those are recorded in subx-factory.
