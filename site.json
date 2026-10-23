@@ -154,7 +154,7 @@
     "lon": -118.4912,
     "forecastUrl": "https://api.weather.gov/gridpoints/LOX/146,45/forecast",
     "forecastPage": "https://forecast.weather.gov/MapClick.php?lat=34.0195&lon=-118.4912",
-    "userAgent": "samochat.com/rail (jebb@subx.it)",
+    "userAgent": "samochat.com/rail (takedown@subx.it)",
     "overlay": {
       "enabled": true,
       "ms": 7000,
