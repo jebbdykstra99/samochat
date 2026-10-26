@@ -5,7 +5,7 @@
   "name": "samochat",
   "tagline": "Santa Monica, talking.",
   "composePlaceholder": "What's happening in SAMO?",
-  "emptyState": "This room is empty. Sign in with email to post the first take about Santa Monica, California — not Samoa. Guest can browse only.",
+  "emptyState": "This room is empty. Sign in with email to post the first take about Santa Monica, California, not Samoa. Guest can browse only.",
   "theme": {
     "bg": "#f6efe4",
     "surface": "#fffaf3",
@@ -88,7 +88,7 @@
     {
       "tag": "Seat",
       "title": "Venice-adjacent",
-      "snippet": "Border-block chat with Venice neighbors — shared streets, not a Venice takeover."
+      "snippet": "Border-block chat with Venice neighbors: shared streets, not a Venice takeover."
     },
     {
       "tag": "Neighborhood",
@@ -103,7 +103,7 @@
     {
       "tag": "Neighborhood",
       "title": "Ocean Park",
-      "snippet": "South of the Pier — locals, bikes, and the strand."
+      "snippet": "South of the Pier: locals, bikes, and the strand."
     }
   ],
   "topics": [
@@ -115,12 +115,12 @@
     {
       "tag": "Seat",
       "title": "Recommendations",
-      "snippet": "Local asks and tips — food, fixes, “where do I…?”"
+      "snippet": "Local asks and tips: food, fixes, “where do I…?”"
     },
     {
       "tag": "Beach",
       "title": "Bike path & the strand",
-      "snippet": "Coast path talk — conditions from NWS when we brief, not invented surf."
+      "snippet": "Coast path talk: conditions from NWS when we brief, not invented surf."
     },
     {
       "tag": "Weather",
@@ -134,7 +134,7 @@
     },
     {
       "tag": "Clarity",
-      "title": "Santa Monica, CA — not Samoa",
+      "title": "Santa Monica, CA: not Samoa",
       "snippet": "This room is the California coast city. Not the island in the Pacific."
     }
   ],
@@ -149,7 +149,7 @@
     "title": "Room Brief",
     "kicker": "On samo",
     "meta": "Live · NWS LOX · Fri FACT",
-    "footer": "Official NWS LOX forecast for Santa Monica. Fri Sep 25 FACT: patchy fog, then mostly sunny, high near 79°F. Not a news ingest. Santa Monica, CA — not Samoa.",
+    "footer": "Official NWS LOX forecast for Santa Monica. Fri Sep 25 FACT: patchy fog, then mostly sunny, high near 79°F. Not a news ingest. Santa Monica, CA: not Samoa.",
     "lat": 34.0195,
     "lon": -118.4912,
     "forecastUrl": "https://api.weather.gov/gridpoints/LOX/146,45/forecast",
@@ -158,7 +158,7 @@
     "overlay": {
       "enabled": true,
       "ms": 7000,
-      "headline": "Patchy morning fog, then mostly sunny, high near 79°F — NWS LOX (Fri FACT)",
+      "headline": "Patchy morning fog, then mostly sunny, high near 79°F. NWS LOX (Fri FACT)",
       "links": [
         {
           "label": "NWS Santa Monica forecast",
@@ -191,7 +191,7 @@
         "tag": "Watch",
         "headline": "Santa Monica CityTV",
         "url": "https://www.smgov.net/video/",
-        "snippet": "City of Santa Monica official video hub (CityTV 16 live + council/planning archives). Outbound only — no in-app re-stream.",
+        "snippet": "City of Santa Monica official video hub (CityTV 16 live + council/planning archives). Outbound only, no in-app re-stream.",
         "meta": "Legal · outbound"
       }
     ],
@@ -200,10 +200,10 @@
       "state": "Morning FACT",
       "updatedAt": "2026-09-25T06:26:00Z",
       "source": "NWS LOX · point Santa Monica · updated ~11:26 PM PDT Sep 24",
-      "today": "Partly cloudy overnight, 69°F calm; Friday patchy fog before 11am, then mostly sunny, high near 79°F, WSW 5–10 mph afternoon.",
+      "today": "Partly cloudy overnight, 69°F calm; Friday patchy fog before 11am, then mostly sunny, high near 79°F, WSW 5 to 10 mph afternoon.",
       "tonight": "Patchy fog, low around 69°F.",
       "page": "https://forecast.weather.gov/MapClick.php?lat=34.0195&lon=-118.4912",
-      "note": "Santa Monica, CA — not Samoa. Not a news ingest. No invented beach/surf."
+      "note": "Santa Monica, CA: not Samoa. Not a news ingest. No invented beach/surf."
     },
     "maxCards": 4,
     "liveKeep": true,
@@ -319,7 +319,7 @@
       "label": "LOX",
       "parent": null,
       "kind": "theme",
-      "blurb": "Coast weather talk — Room Brief stays live NWS LOX; never invent beach/surf. Not NWS.",
+      "blurb": "Coast weather talk: Room Brief stays live NWS LOX; never invent beach/surf. Not NWS.",
       "nav": true
     },
     {
@@ -327,7 +327,7 @@
       "label": "Eats",
       "parent": null,
       "kind": "theme",
-      "blurb": "SM food opinions (Pico, Main, Montana, Promenade) — not ads.",
+      "blurb": "SM food opinions (Pico, Main, Montana, Promenade): not ads.",
       "nav": true
     },
     {
@@ -343,7 +343,7 @@
       "label": "Recommendations",
       "parent": null,
       "kind": "theme",
-      "blurb": "Local tips seat — mirrors Explore Recommendations.",
+      "blurb": "Local tips seat: mirrors Explore Recommendations.",
       "nav": true
     },
     {
@@ -351,7 +351,7 @@
       "label": "Events",
       "parent": null,
       "kind": "theme",
-      "blurb": "Local happenings talk — cite city/BID calendars; do not invent.",
+      "blurb": "Local happenings talk: cite city/BID calendars; do not invent.",
       "nav": true
     },
     {
@@ -359,7 +359,7 @@
       "label": "Big Blue Bus",
       "parent": null,
       "kind": "theme",
-      "blurb": "Rider experience on Santa Monica's bus — not official Big Blue Bus.",
+      "blurb": "Rider experience on Santa Monica's bus, not official Big Blue Bus.",
       "nav": true
     },
     {
@@ -367,7 +367,7 @@
       "label": "CityTV",
       "parent": null,
       "kind": "theme",
-      "blurb": "Council / Planning / Rent Control watch threads — outbound smgov.net/video; not the City.",
+      "blurb": "Council / Planning / Rent Control watch threads: outbound smgov.net/video; not the City.",
       "nav": true
     },
     {
@@ -375,7 +375,7 @@
       "label": "Housing",
       "parent": null,
       "kind": "theme",
-      "blurb": "Rent, moving, roommate talk inside SM — not a listings board.",
+      "blurb": "Rent, moving, roommate talk inside SM: not a listings board.",
       "nav": true
     },
     {
@@ -383,7 +383,7 @@
       "label": "Pier & Promenade",
       "parent": null,
       "kind": "place",
-      "blurb": "Pier / Ocean Ave / Third Street Promenade place talk — not tourism chrome.",
+      "blurb": "Pier / Ocean Ave / Third Street Promenade place talk, not tourism chrome.",
       "nav": true
     },
     {
@@ -391,7 +391,7 @@
       "label": "Venice edge",
       "parent": null,
       "kind": "place",
-      "blurb": "Shared-border talk with Venice neighbors — SM-first; not a Venice room.",
+      "blurb": "Shared-border talk with Venice neighbors: SM-first; not a Venice room.",
       "nav": true
     }
   ],
