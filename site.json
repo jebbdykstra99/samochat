@@ -406,5 +406,6 @@
     "profileEmpty": "No posts yet. Hit Post when something about the city is on your mind."
   },
   "minAge": 18,
-  "redditCrosspost": false
+  "redditCrosspost": false,
+  "accountsOpen": true
 }
