@@ -27,4 +27,4 @@ Wordmark: **samochat**. Tagline: *Santa Monica, talking.* `SITE_ID` is `samochat
 - Guest is browse-only. Google provider stays off until enabled.
 - Images `image/*` ≤ 5 MB. GIF is a user-uploaded `.gif`, not Tenor.
 - AI off the hot path. No Reddit/X ingest.
-- Preview banner and `robots.txt` noindex stay until SubX lifts them.
+- Live: Beta banner, search indexing allowed (`robots.txt` + `sitemap.xml`). Training crawlers stay disallowed.
