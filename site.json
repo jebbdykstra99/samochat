@@ -144,6 +144,24 @@
     "maxBytes": 8000000
   },
   "seedNote": "STEWARD_REFRESH Fri 2026-09-25 · LOX/CityTV · no second fight",
+  "featured": {
+    "featuredDays": 3,
+    "maxPinned": 3,
+    "articleMinChars": 600,
+    "label": "Our articles",
+    "handles": [
+      "smnotsamoa",
+      "promenote",
+      "marketrun",
+      "picowalk",
+      "veniceedge",
+      "loxdesk",
+      "councilrail",
+      "fogline",
+      "bbbrail",
+      "citytvwatch"
+    ]
+  },
   "rail": {
     "kind": "nws-forecast",
     "title": "Room Brief",
